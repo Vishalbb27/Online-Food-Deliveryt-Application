@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/profile/profile.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;500;600&display=swap" rel="stylesheet">
+    <!-- Google fonts -->
+</head>
+
+<body>
+    <section id="header">
+        <section id="navigationBar">
+            <div class="logo">
+                <p onclick="redirect()">Foody</p>
+            </div>
+            <div class="profile">
+                <p><%= user %></p>
+                <a href="#"><img src="https://img.icons8.com/color-glass/96/000000/gender-neutral-user.png"></a>
+                <div class="dropdown">
+                    <a href="/logout">Logout</a>
+                    <a href="/profile">Profile</a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section id="top">
+        <div class="profileInformation">
+            <p>NAME : <%=user%> </p>
+            <p>EMAIL : <%=email%> </p>
+            <p>CONTACT : <%=phone%> </p>
+            <p>CARD NUMBER : <%=card%> </p>
+            <div class="address">
+                <P>ADDRESS : </P>
+                <p>&nbsp;<%=address%></p>
+            </div>
+            <a onclick="changepass()">Change Password</a>
+        </div>
+    </section>
+
+    <a href="/changePassword" hidden></a>
+    <p id="historyHeading">Order History</p>
+    
+    <section id="bottom">
+        <% for(var i = 0; i < resultArrayOrder.length; i++) {%>
+            <div class="ohis">
+
+                <p><%= i+1 %></p>
+                <p style="width: 270px;"><%= resultArrayOrder[i].ORDER_NAME %></p>
+                <p>	&#8377;<%= resultArrayOrder[i].ORDER_PRICE %></p>
+                <p><%= resultArrayOrder[i].ORDER_DATES %></p>
+            </div>
+        <% } %>
+
+    </section>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script>
+        function redirect() {
+        location.replace("/home")
+        }
+        function changepass() {
+            var pass = prompt("Enter New password")
+            var a = document.getElementsByTagName("a")[0]
+
+            a.setAttribute("href", "/changePassword/"+pass)
+            a.click()
+        }
+        
+        </script>
+
+</body>
+</html>

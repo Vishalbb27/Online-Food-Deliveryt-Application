@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout/checkout.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;500;600&display=swap" rel="stylesheet">
+    <!-- Google fonts -->
+
+</head>
+<body>
+    <section id="header">
+        <section id="navigationBar">
+            <div class="logo">
+                <p onclick="redirect()">Foody</p>
+            </div>
+            <div class="profile">
+                <p><%= user %></p>
+                <a href="#"><img src="https://img.icons8.com/color-glass/96/000000/gender-neutral-user.png"></a>
+                <div class="dropdown">
+                    <a href="/logout">Logout</a>
+                    <a href="/profile">Profile</a>
+                </div>
+            </div>
+        </section>
+    </section>
+    
+    <section id="checkout">
+        <% for(var i = 0; i < resultArray.length; i++) {%>
+            <div class="food">
+                <p id="foodName"><%= resultArray[i].C_NAME %></p>
+                <p id="price">&#8377;<%= resultArray[i].C_PRICE %></p>
+                <p class="price" hidden><%= resultArray[i].C_PRICE %></p>
+                <a href="/delete/<%= resultArray[i].CART_ID %>" onclick="deleteF(this)">DELETE</a>
+                <div hidden><%= resultArray[i].CART_ID %></div>
+            </div>
+        <% } %>
+    </section>
+
+    <section id="footer">
+        <p id="dnames" hidden><%= dname %></p>
+        <p id="dphones" hidden><%= dphone %></p>
+        <!-- <p id="daddresses" hidden><%= daddress %></p>    -->
+        <a href="/payment" id="payment" onclick="sweetAlert2()">DELIVER NOW</a>
+    </section>
+
+    <script>
+        function redirect() {
+        location.replace("/home")
+        }
+        function deleteF(a) {
+            console.log(a)
+        }
+
+        // Price
+        var length = document.getElementsByClassName("price").length
+        var total = 0
+        for(var i=0; i<=length; i++) {
+            var price = document.getElementsByClassName("price")[i].innerText
+            var price = parseInt(price)
+            total = total + price
+        }
+
+        // Sweet Alert
+        function sweetAlert2(){
+            Swal.fire({
+                icon: 'success',
+                title: 'Order placed successfully!',
+                html: "<p style='font-size: 1.5rem; color: #FF0A54; font-weight: bold;'>Total: Rs."+total+"</p>"+"<br>"+"<p>Our Delivery Person <span style='color: #FF0A54'><%= dname %></span> is on the way.</p>"+"<p>Contact: <%=dphone%></p>"+"<p>Address : <%=daddress%></p>",
+                confirmButtonText: 'Okay',
+                confirmButtonColor: 'green',
+                footer: '<p style="font-size: 1.5rem">Thank you for your order <span style="color: #FF0A54; font-weight: bold; font-size:2rem;"> <%= user %></span> </p>'
+            }).then((result) => {
+                if(result.isConfirmed) {
+                    location.replace("/deleteCart")
+                }
+            })
+        }
+
+
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+</body>
+</html>
+

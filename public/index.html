@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foody</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+    <!-- Fonts Start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Fonts End -->
+</head>
+
+<body>
+    <section class="background">
+        <div class="mainTransparent">
+            <section class="header">
+                <div class="logo">
+                    <img id="logo" src="./Assets/images/logo.png" alt="logo" width="100px">
+                </div>
+                <nav class="navbar">
+                    <a href="#">Overview</a>
+                    <a href="#">Recipes</a>
+                    <a href="#">Restaurant</a>
+                    <a href="#">Favorite</a>
+                </nav>
+                
+                <div class="login">
+                    <a href="/login">Login</a>
+                    <a href="/signUp" id="signup">Sign Up</a>
+                </div>
+            </section>
+
+            <section class="main">
+                <div class="leftMain">
+                    <p>EASY WAY TO ORDER YOUR FOOD</p>
+                    <h1>Order Tasty & Fresh Food <span>anytime!</span></h1>
+                    <h5>Just confirm your order and enjoy our delicious fastest delivery.</h5>
+                    <a href="#" id="button">Order Now</a>
+                    <a href="#">See Menu</a>
+                </div>
+                <div class="rightMain">
+                        <img src="./Assets/images/bigFoodBackground.png" alt="">
+                </div>
+            </section>
+
+            <h1 id="miniHeader">Best Seller</h1>
+
+            <section class="bottomFood">
+                <div class="firstFood">
+                    <img src="./Assets/images/food1.png" alt="food">
+                    <div class="text">
+                        <p>Pappardelle</p>
+                        <div class="star">
+                            <img src="./Assets/images/star.png" alt="" width="15px">
+                            <img src="./Assets/images/star.png" alt="" width="15px">
+                            <img src="./Assets/images/star.png" alt="" width="15px">
+                            <img src="./Assets/images/star.png" alt="" width="15px">
+                            <img src="./Assets/images/star.png" alt="" width="15px">
+                        </div>
+                        <p id="price">&#8377;35.00</p>
+                        <a href="#">Order Now</a>
+                    </div>
+                </div>
+                <div class="secondFood">
+                    <img src="./Assets/images/food2.png" alt="food">
+                    <div class="text">
+                        <p>Ravioli Stuffed</p>
+                        <div class="star">
+                            <img src="./Assets/images/star.png" alt="" width="15px">
+                            <img src="./Assets/images/star.png" alt="" width="15px">
+                            <img src="./Assets/images/star.png" alt="" width="15px">
+                            <img src="./Assets/images/star.png" alt="" width="15px">
+                            <img src="./Assets/images/star.png" alt="" width="15px">
+                        </div>
+                        <p id="price">&#8377;24.00</p>
+                        <a href="#">Order Now</a>
+                    </div>
+                </div>
+                <div class="thirdFood">
+                    <img src="./Assets/images/food3.png" alt="food">
+                    <div class="text">
+                        <p>Cheese Pasta</p>
+                        <div class="star">
+                            <img src="./Assets/images/star.png" alt="" width="15px">
+                            <img src="./Assets/images/star.png" alt="" width="15px">
+                            <img src="./Assets/images/star.png" alt="" width="15px">
+                            <img src="./Assets/images/star.png" alt="" width="15px">
+                            <img src="./Assets/images/star.png" alt="" width="15px">
+                        </div>
+                        <p id="price">&#8377;42.00</p>
+                        <a href="#">Order Now</a>
+                    </div>
+                </div>
+                <div class="fourthFood">
+                    <img src="./Assets/images/food4.png" alt="food">
+                    <div class="text">
+                        <p>Ravioli</p>
+                        <div class="star">
+                            <img src="./Assets/images/star.png" alt="" width="15px">
+                            <img src="./Assets/images/star.png" alt="" width="15px">
+                            <img src="./Assets/images/star.png" alt="" width="15px">
+                            <img src="./Assets/images/star.png" alt="" width="15px">
+                            <img src="./Assets/images/star.png" alt="" width="15px">
+                        </div>
+                        <p id="price">&#8377;42.00</p>
+                        <a href="#">Order Now</a>
+                    </div>
+                </div>
+                
+            </section>
+        </div>
+        <footer>
+            <p id="foot"></p>
+        </footer>
+    </section>
+    <script>
+        var date = new Date()
+        date = date.getFullYear()
+        
+        var year = document.getElementById("foot")
+        year.innerHTML = "<p>&copy; All right Reserved "+date+"</p>"
+        
+    </script>
+</body>
+
+</html>

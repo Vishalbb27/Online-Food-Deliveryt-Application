@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foody</title>
+    <link rel="stylesheet" href="home.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;500;600&display=swap" rel="stylesheet">
+    <!-- Google fonts -->
+</head>
+
+<body>
+    <a href="#navigationBar">^</a>
+    <a href="/checkout/direct">CHECKOUT</a>
+
+    <section id="navigationBar">
+        <div class="logo">
+            <!-- <img src="./assets/img/logo.png" alt="logo"> -->
+            <p>Foody</p>
+        </div>
+        <div class="navigationMenu">
+            <a href="#carousel">Home</a>
+            <a href="#trendingText">Trending</a>
+            <a href="#foodText">Menu</a>
+            <a href="#features">Features</a>
+            <a href="#footer">Contact</a>
+        </div>
+        <div class="profile">
+            <p><%= user %></p>
+            <a href="#"><img src="https://img.icons8.com/color-glass/96/000000/gender-neutral-user.png" /></a>
+            <div class="dropdown">
+                <a href="/logout">Logout</a>
+                <a href="/profile">Profile</a>
+            </div>
+        </div>
+    </section>
+    <!-- navigation END -->
+
+
+    <section id="carousel">
+        <div class="mySlides fade">
+            <img src="./assets/img/1.jpg" width="100%" style="box-shadow: 0 0px 50px 10px #940C0D;">
+        </div>
+        <div class="mySlides fade">
+            <img src="./assets/img/2.jpg" width="100%" style="box-shadow: 0 0px 50px 10px #F85303;">
+        </div>
+        <div class="mySlides fade">
+            <img src="./assets/img/3.jpg" width="100%" style="box-shadow: 0 0px 50px 10px #AB0201;">
+        </div>
+        <div class="mySlides fade">
+            <img src="./assets/img/4.jpg" width="100%" style="box-shadow: 0 0px 50px 10px #FAA400;">
+        </div>
+    </section>
+    <!-- carousel END -->
+
+
+    <p id="trendingText">Customers Choice</p>
+    <section id="trending">
+        <div class="trendingFood">
+            <img src="./assets/img/food12.png" alt="foodImage" width="200px">
+            <p>Margherita</p>
+            <div class="star">
+                <img src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/32/000000/external-five-pointed-star-rating-for-performance-on-online-entertainment-platform-votes-tritone-tal-revivo.png"
+                    width="25px" />
+                <img src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/32/000000/external-five-pointed-star-rating-for-performance-on-online-entertainment-platform-votes-tritone-tal-revivo.png"
+                    width="25px" />
+                <img src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/32/000000/external-five-pointed-star-rating-for-performance-on-online-entertainment-platform-votes-tritone-tal-revivo.png"
+                    width="25px" />
+                <img src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/32/000000/external-five-pointed-star-rating-for-performance-on-online-entertainment-platform-votes-tritone-tal-revivo.png"
+                    width="25px" />
+                <img src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/32/000000/external-five-pointed-star-rating-for-performance-on-online-entertainment-platform-votes-tritone-tal-revivo.png"
+                    width="25px" />
+            </div>
+            <p>&#8377;50.00</p>
+            <a href="/checkout/margherita">Checkout</a>
+        </div>
+        <div class="trendingFoodMiddle">
+            <img src="./assets/img/food21.png" alt="foodImage" width="270px">
+            <p>Beef Burger</p>
+            <div class="star">
+                <img src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/32/000000/external-five-pointed-star-rating-for-performance-on-online-entertainment-platform-votes-tritone-tal-revivo.png"
+                    width="25px" />
+                <img src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/32/000000/external-five-pointed-star-rating-for-performance-on-online-entertainment-platform-votes-tritone-tal-revivo.png"
+                    width="25px" />
+                <img src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/32/000000/external-five-pointed-star-rating-for-performance-on-online-entertainment-platform-votes-tritone-tal-revivo.png"
+                    width="25px" />
+                <img src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/32/000000/external-five-pointed-star-rating-for-performance-on-online-entertainment-platform-votes-tritone-tal-revivo.png"
+                    width="25px" />
+                <img src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/32/000000/external-five-pointed-star-rating-for-performance-on-online-entertainment-platform-votes-tritone-tal-revivo.png"
+                    width="25px" />
+            </div>
+            <p>&#8377;200.00</p>
+            <a href="/checkout/beefBurger">Checkout</a>
+        </div>
+        <div class="trendingFood">
+            <img src="./assets/img/food31.png" alt="foodImage" width="200px">
+            <p>Hazelnut Chocolate</p>
+            <div class="star">
+                <img src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/32/000000/external-five-pointed-star-rating-for-performance-on-online-entertainment-platform-votes-tritone-tal-revivo.png"
+                    width="25px" />
+                <img src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/32/000000/external-five-pointed-star-rating-for-performance-on-online-entertainment-platform-votes-tritone-tal-revivo.png"
+                    width="25px" />
+                <img src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/32/000000/external-five-pointed-star-rating-for-performance-on-online-entertainment-platform-votes-tritone-tal-revivo.png"
+                    width="25px" />
+                <img src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/32/000000/external-five-pointed-star-rating-for-performance-on-online-entertainment-platform-votes-tritone-tal-revivo.png"
+                    width="25px" />
+                <img src="https://img.icons8.com/external-tal-revivo-tritone-tal-revivo/32/000000/external-five-pointed-star-rating-for-performance-on-online-entertainment-platform-votes-tritone-tal-revivo.png"
+                    width="25px" />
+            </div>
+            <p>&#8377;40.00</p>
+            <a href="/checkout/hazelnutChocolate" >Checkout</a>
+        </div>
+    </section>
+    <!-- trending END -->
+
+    <p id="foodText">Menu</p>
+    <section id="menu">
+        <p style="color: #606201; background-color: #8789001c;">PIZZA</p>
+        <div class="food1">
+            <div class="food11">
+                <img src="./assets/img/food11.png" alt="" width="240px" style="filter: drop-shadow(0 0 2rem #DD9424);">
+                <p>Barbecue</p>
+                <p>&#8377;100.00</p>
+                <a href="/checkout/barbecue">Checkout</a>
+            </div>
+            <div class="food11">
+                <img src="./assets/img/food12.png" alt="" width="240px" style="filter: drop-shadow(0 0 2rem #DD9424);">
+                <p>Margherita</p>
+                <p>&#8377;50.0</p>
+                <a href="/checkout/margherita">Checkout</a>
+            </div>
+            <div class="food11">
+                <img src="./assets/img/food13.png" alt="" width="240px" style="filter: drop-shadow(0 0 2rem #DD9424);">
+                <p>Pepperoni</p>
+                <p>&#8377;125.00</p>
+                <a href="/checkout/pepperoni">Checkout</a>
+            </div>
+        </div>
+
+        <p style="color: #962612; background-color: #ffdcc4;">BURGER</p>
+        <div class="food2">
+            <div class="food22">
+                <img src="./assets/img/food21.png" alt="" width="350px" style="filter: drop-shadow(0 0 2rem #b34d00);">
+                <p>Beef Burger</p>
+                <p>&#8377;200.00</p>
+                <a href="/checkout/beefBurger">Checkout</a>
+            </div>
+            <div class="food22">
+                <img src="./assets/img/food22.png" alt="" width="350px" style="filter: drop-shadow(0 0 2rem #A24C08);">
+                <p>Rancho Burger</p>
+                <p>&#8377;175.00</p>
+                <a href="/checkout/ranchoBurger">Checkout</a>
+            </div>
+            <div class="food22">
+                <img src="./assets/img/food23.png" alt="" width="350px" style="filter: drop-shadow(0 0 2rem #A24C08);">
+                <p>Hamburger Veggie</p>
+                <p>&#8377;225.00</p>
+                <a href="/checkout/hamburgerVeggie">Checkout</a>
+            </div>
+        </div>
+
+        <p style="color: #FF0A54; background-color: #ffb8c94d;">ICE CREAM</p>
+        <div class="food3">
+            <div class="food33">
+                <img src="./assets/img/food31.png" alt="" width="400px" style="filter: drop-shadow(0 0 2rem #c37855);">
+                <p>Hazelnut Chocolate</p>
+                <p>&#8377;40.00</p>
+                <a href="/checkout/hazelnutChocolate">Checkout</a>
+            </div>
+            <div class="food33">
+                <img src="./assets/img/food32.png" alt="" width="400px" style="filter: drop-shadow(0 0 2rem rgba(220, 20, 60, 0.582));">
+                <p>Straberry</p>
+                <p>&#8377;30.00</p>
+                <a href="/checkout/straberry">Checkout</a>
+            </div>
+            <div class="food33">
+                <img src="./assets/img/food33.png" alt="" width="400px" style="filter: drop-shadow(0 0 2rem #2358a3af);">
+                <p>Oreo Choco</p>
+                <p>&#8377;45.00</p>
+                <a href="/checkout/oreoChoco">Checkout</a>
+            </div>
+        </div>
+
+    </section>
+    <!-- menu END -->
+
+
+    <section id="features">
+        <div class="review" style="text-align: center; margin-top: 5rem;">
+            <img src="./assets/img/review.png" alt="">
+        </div>
+        <div class="fastDelivery" style="text-align: center; margin-top: 5rem;">
+            <img src="./assets/img/feature1.png" alt="" width="1903px">
+            <img src="./assets/img/feature2.png" alt="" width="1903px">
+            <img src="./assets/img/feature3.png" alt="" width="1903px">
+        </div>
+
+    </section>
+    <!-- features END -->
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 4000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+
+</html>

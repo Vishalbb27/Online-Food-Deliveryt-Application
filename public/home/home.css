@@ -1,0 +1,543 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #fffffd;
+    padding: 1% 0;
+}
+a{
+    text-decoration: none;
+
+}
+body>a[href="#navigationBar"]{
+    position: fixed;
+    right: 0.6rem;
+    bottom: 0.6rem;
+    color: #ff5100;
+    font-family: 'Outfit', sans-serif;
+    font-size: 4rem;
+    background-color: #ffffffb0;
+    z-index: 1000;
+    padding: 0 1% 2% 1%;
+    border-radius: 50%;
+    border: 0.2px solid #ff004c33;
+    height: 20px;
+}
+body>a[href="/checkout/direct"]{
+    position: fixed;
+    left: 0.6rem;
+    bottom: 0.6rem;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    background-color: #ff004cc9;
+    z-index: 1000;
+    padding: 1% 1% 2% 1%;
+    border-radius: 5px;
+    height: 20px;
+    margin: 0;
+    transition-duration: 0.5s;
+    text-shadow: 0 0 2px white;
+}
+body>a[href="/checkout/direct"]:hover{
+    transition-duration: 0.7s;
+    background-color: rgba(255, 255, 255, 0.733);
+    color: #ff004c;
+    text-shadow: 0 0 2px #ff004c;
+    border: 0.5px solid #ff004c; 
+}
+#navigationBar{
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0 1%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    /* background: linear-gradient(135deg, #FFAE00, #FF8A00); */
+}   
+#navigationBar .logo{
+    display: inherit;
+    flex-direction: row;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #F17228;
+}
+/* #navigationBar .logo img{
+    width: 60px;
+    height: 60px;
+    transition-duration: 0.5s;
+}
+#navigationBar .logo img:hover{
+    margin-right: 10px;
+    transition-duration: 0.5s;
+} */
+#navigationBar .logo>p{
+    font-family: 'Allura', cursive;
+    font-size: 3rem;
+    color: #ff5e00;
+    transition-duration: 0.5s;
+}
+#navigationBar .logo>p:hover{
+    letter-spacing: 3px;
+    transition-duration: 0.7s;
+}
+#navigationBar .navigationMenu{
+    min-width: 50%;
+    text-align: center;
+}
+
+#navigationBar .navigationMenu a{
+    margin: 0.8%;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition-duration: 0.7s;
+    color: #9E9E9E;
+    font-size: 1.2rem;
+}
+#navigationBar .navigationMenu a:hover{
+    color: #FF3E00;
+    transition-duration: 0.3s;
+    letter-spacing: 3px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    text-shadow: 0 0 2px #FF3E00;
+}
+#navigationBar .profile{
+    display: inherit;
+    align-items: center;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+#navigationBar .profile p{
+    color: #FF8A00;
+    visibility: hidden;
+    right: -70px;
+    position: relative;
+    transition-duration: 1s;
+    transition-property: visibility right;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+#navigationBar .profile:hover p{
+    visibility: visible;
+    position: relative;
+    right: 10px;
+    text-align: right;
+    transition-duration: 0.5s;
+}
+#navigationBar .profile a img{
+    width: 45px;
+    height: 45px;
+    filter: hue-rotate(222deg);
+}
+#navigationBar .profile .dropdown {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 5px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px 0px #ffae0041;
+    padding: 6px 16px;
+    z-index: 1;
+    transition-duration: 1s;
+  }
+#navigationBar .profile:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition-duration: 1s;
+}
+#navigationBar .profile .dropdown a{
+    text-decoration: none;
+    text-transform: uppercase;
+    transition-duration: 0.3s;
+    color: #818181;
+    margin: 10px 0;
+    font-weight: normal;
+}
+#navigationBar .profile .dropdown a:hover{
+    color: #ff5e00;
+    transition-duration: 0.5s;
+    font-weight: bold;
+}
+
+/* END OF NAVIGATION */
+
+#carousel{
+    width: 100%;
+    height: 900px;
+    position: relative;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 6rem;
+    overflow: hidden;
+}
+#carousel img{
+    height: 800px;
+}
+
+/* code by w3s */
+.fade {
+    animation-name: fade;
+    animation-duration: 5s;
+}
+
+@keyframes fade {
+    0% {transform: scale(1);}
+    100% {transform: scale(1.05);}
+}
+/* code by w3s */
+/* END CAROUSEL */
+
+p[id="trendingText"]{
+    
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: rgb(255, 102, 0);
+    /* text-decoration: underline; */
+    text-underline-offset: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 100;
+    text-decoration-thickness: 1px;
+    transition-duration: 1s;
+}
+p[id="trendingText"]:hover{
+    letter-spacing: 3px;
+    transition-duration: 0.7s;
+}
+
+#trending{
+    display: flex;
+    font-family: 'Outfit', sans-serif;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5% 20%;
+}
+
+#trending .trendingFood{
+    text-align: center;
+    background: #FEFAF1;
+    padding: 3% 5% 7% 5%;
+    border-radius: 30px;
+    box-shadow: 0 2px 50px 0 #caae6d70;
+    transition-duration: 0.5s;
+    height: 330px;
+}
+#trending .trendingFood:hover{
+    box-shadow: none;
+    /* box-shadow: inset 0 2px 70px 0 #e7dbbe; */
+    transition-duration: 0.7s;
+}
+
+#trending .trendingFoodMiddle{
+    text-align: center;
+    background: #FEEFD0;
+    padding: 5%;
+    border-radius: 30px;
+    box-shadow: 0 2px 70px 0 #c3891586;
+    transition-duration: 0.5s;
+    width: 250px;
+    height: 390px;
+    position: relative;
+    bottom: 30px;
+}
+#trending .trendingFoodMiddle:hover{
+    box-shadow: none;
+    transition-duration: 0.7s;
+}
+#trending .trendingFood img[alt="foodImage"], #trending .trendingFoodMiddle img[alt="foodImage"] {
+    border-radius: 30px;
+
+}
+#trending .trendingFood :nth-child(2), #trending .trendingFoodMiddle :nth-child(2){
+    margin-top: 10%;
+    font-size: 1.5rem;
+    color: #FF3E00;
+    margin-bottom: 5%;
+    font-weight: bold;
+}
+#trending .trendingFood :nth-child(4), #trending .trendingFoodMiddle :nth-child(4){
+    margin: 5% 0 10% 0;
+    font-size: 1.3rem;
+}
+#trending .trendingFoodMiddle a{
+    background-color: #FF3E00;
+    color: #FEFEFC;
+    padding: 5% 7%;
+    border-radius: 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition-duration: 0.5s;
+}
+#trending .trendingFoodMiddle a:hover{
+    box-shadow: 0 6px 20px 0 #ff4000c4;
+    transition-duration: 0.7s;
+    text-shadow: 0 0 4px white;
+}
+#trending .trendingFood a{
+    color: #FF3E00;
+    border: 1px solid #FF3E00;
+    padding: 5% 7%;
+    border-radius: 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition-duration: 0.5s;
+}
+#trending .trendingFood a:hover{
+    background-color: #FF3E00;
+    color: #FEFEFC;
+    box-shadow: 0 6px 20px 0 #ff4000c4;
+    transition-duration: 0.7s;
+    text-shadow: 0 0 4px white;
+}
+#trending .trendingFood .star img, #trending .trendingFoodMiddle .star img{
+    margin: 0;
+}
+
+/* END TRENDING */
+
+
+/* START MENU */
+
+p[id="foodText"]{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: rgb(255, 102, 0);
+    margin-bottom: 5rem;
+    /* text-decoration: underline; */
+    text-underline-offset: 8px;
+    text-decoration-thickness: 1px;
+    font-family: 'Outfit', sans-serif;
+    transition-duration: 1s;
+    
+}
+p[id="foodText"]:hover{
+    letter-spacing: 5px;
+    transition-duration: 0.7s;
+}
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-family: 'Outfit', sans-serif;
+
+
+}
+#menu>p{
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 2rem 10rem;
+    transition-duration: 1s;
+    width: 1583px;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    letter-spacing: 2px;
+    font-family: 'Khand', sans-serif;
+
+
+}
+#menu>p:hover{
+    color: white;
+    /* letter-spacing: 5px; */
+    box-shadow: none;
+    transition-duration: 0.5s;
+    font-family: 'Khand', sans-serif;
+    font-size: 3rem;
+
+    
+}
+
+#menu .food1, #menu .food2, #menu .food3{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #444600;
+    width: 100%;
+    font-family: 'Outfit', sans-serif;
+}
+#menu .food1{
+    background-color: #8789001c;
+    height: 700px;
+}
+#menu .food2{
+    background-color: #ffdcc4;
+    height: 680px;
+}
+#menu .food3{
+    background-color: #ffb8c94d;
+    height: 750px;
+}
+#menu .food1 .food11 :nth-child(2){
+    color: #444600;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}
+#menu .food1 .food11 :nth-child(3){
+    color: #888888;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-weight: 300;
+
+}
+#menu .food1 .food11 :nth-child(4){
+    color: #606201;
+    border: 1px solid #606201;
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    padding: 3% 5%;
+    border-radius: 10px;
+    transition-duration: 0.7s;
+    font-weight: 400;
+
+}
+#menu .food1 .food11 :nth-child(4):hover{
+    color: white;
+    background-color: #606201;
+    transition-duration: 0.5s;
+    box-shadow: 0 6px 20px 0 #606201c4;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-weight: 400;
+
+}
+
+
+
+#menu .food2 .food22 :nth-child(2){
+    color: #580d00;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}
+#menu .food2 .food22 :nth-child(3){
+    color: #888888;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+#menu .food2 .food22 :nth-child(4){
+    color: #962612;
+    border: 1px solid #962612;
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    padding: 3% 5%;
+    border-radius: 10px;
+    transition-duration: 0.7s;
+    font-weight: 400;
+}
+#menu .food2 .food22 :nth-child(4):hover{
+    color: white;
+    background-color: #962612;
+    transition-duration: 0.5s;
+    box-shadow: 0 6px 20px 0 #962612c4;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+
+#menu .food3 .food33 :nth-child(2){
+    color: #c5003b;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}
+#menu .food3 .food33 :nth-child(3){
+    color: #888888;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+#menu .food3 .food33 :nth-child(4){
+    color: #FF0A54;
+    border: 1px solid #FF0A54;
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    padding: 3% 5%;
+    border-radius: 10px;
+    transition-duration: 0.7s;
+    font-weight: 400;
+}
+#menu .food3 .food33 :nth-child(4):hover{
+    color: white;
+    background-color: #FF0A54;
+    transition-duration: 0.5s;
+    box-shadow: 0 6px 20px 0 #FF0A54c4;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+
+
+#menu .food1 .food11{
+    text-align: center;
+    margin: 0 1%;
+    background-color: rgba(255, 255, 255, 0.253) ;
+    padding: 5%;
+    border-radius: 30px;
+    height: 400px;
+    transition-duration: 0.7s;
+}
+#menu .food1 .food11:hover{
+    transform: scale(1.1);
+    transition-duration: 1s;
+    box-shadow: 0 0px 50px 0 #f6ff001e;
+    
+}
+#menu .food2 .food22{
+    text-align: center;
+    margin: 0 1%;
+    background-color: rgba(255, 255, 255, 0.253) ;
+    padding: 3%;
+    border-radius: 30px;
+    height: 450px;
+    transition-duration: 0.7s;
+}
+#menu .food2 .food22:hover{
+    transform: scale(1.1);
+    transition-duration: 1s;
+    box-shadow: 0 0px 50px 0 #ff26002d;
+    
+}
+#menu .food3 .food33{
+    text-align: center;
+    margin: 0 1%;
+    background-color: rgba(255, 255, 255, 0.253) ;
+    padding: 2%;
+    border-radius: 30px;
+    height: 600px;
+    transition-duration: 0.7s;
+}
+#menu .food3 .food33:hover{
+    transform: scale(1.1);
+    transition-duration: 1s;
+    box-shadow: 0 0px 50px 0 #FF0A541e;
+}
