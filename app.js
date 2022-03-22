@@ -26,7 +26,7 @@ var dphone = ""
 var con = mysql.createConnection({
         host: 'localhost',
         user: 'root',
-        password: '6366vishalbb178198',
+        password: '', //ENTER YOUR PASSWORD HERE FOR SQL DATABASE
         database: "foodDelivery"
 })
 createDatabase();
